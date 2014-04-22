@@ -372,12 +372,12 @@ class Kohana_Response implements HTTP_Response {
 	 *
 	 * Download a file that already exists:
 	 *
-	 *     $request->send_file('media/packages/kohana.zip');
+	 *     $response->send_file('media/packages/kohana.zip');
 	 *
 	 * Download generated content as a file:
 	 *
-	 *     $request->response($content);
-	 *     $request->send_file(TRUE, $filename);
+	 *     $response->response($content);
+	 *     $response->send_file(TRUE, $filename);
 	 *
 	 * [!!] No further processing can be done after this method is called!
 	 *
@@ -388,7 +388,7 @@ class Kohana_Response implements HTTP_Response {
 	 * @throws  Kohana_Exception
 	 * @uses    File::mime_by_ext
 	 * @uses    File::mime
-	 * @uses    Request::send_headers
+	 * @uses    Response::send_headers
 	 */
 	public function send_file($filename, $download = NULL, array $options = NULL)
 	{
